@@ -1,0 +1,67 @@
+// breakpoints
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1280px;
+
+// site colors palette
+$colors: (
+  'text-primary': #907e82,
+  'text-secondary': #000000,
+  'text-label': #ffa5ba,
+  'accent': #d41443,
+  'background-primary': #ffffff,
+  'background-secondary': #fff5f6,
+  'background-hero': #ffb8ca,
+  'background-mobile-menu': #e17992,
+  'backdrop': rgba(75, 41, 49, 0.774),
+  'icon': #fea5bb,
+  'gradient-grey': #e1e1e1,
+);
+
+// site fonts
+$fontPrimary: 'DM Sans', sans-serif;
+$fontSecondary: 'Titan One', cursive;
+
+// transitions duration and timing
+$transitionDuration: 300ms;
+$transitionTiming: cubic-bezier(0.4, 0, 0.2, 1);
+
+// breakpoints map for respondTo() mixin
+$breakpoints: (
+  'mobile': (
+    min-width: #{$mobile},
+  ),
+  'tablet': (
+    min-width: #{$tablet},
+  ),
+  'desktop': (
+    min-width: #{$desktop},
+  ),
+  '-mobile': (
+    max-width: #{$mobile - 1},
+  ),
+  '-tablet': (
+    max-width: #{$tablet - 1},
+  ),
+  '-desktop': (
+    max-width: #{$desktop - 1},
+  ),
+  'mobile-tablet': (
+    min-width: #{$mobile},
+  )
+  #{and} (
+    max-width: #{$tablet - 1},
+  ),
+  'mobile-desktop': (
+    min-width: #{$mobile},
+  )
+  #{and} (
+    max-width: #{$desktop - 1},
+  ),
+  'tablet-desktop': (
+    min-width: #{$tablet},
+  )
+  #{and} (
+    max-width: #{$desktop - 1},
+  ),
+) !default;

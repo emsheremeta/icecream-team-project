@@ -1,0 +1,17 @@
+.container {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  width: 100%;
+  max-width: 440px;
+
+  @include respondTo(tablet) {
+    max-width: 700px;
+  }
+
+  @include respondTo(desktop) {
+    max-width: 1050px;
+  }
+}

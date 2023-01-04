@@ -1,0 +1,197 @@
+.reviews__section {
+  padding-bottom: 86px;
+
+  @include respondTo(tablet) {
+    padding-bottom: 119px;
+  }
+
+  @include respondTo(desktop) {
+    padding-bottom: 132pxpx;
+  }
+}
+
+.reviews-article {
+  position: relative;
+
+  &__text {
+    position: relative;
+    font-family: $fontPrimary;
+    font-weight: 500;
+    text-align: center;
+
+    color: getColor('text-secondary');
+
+    font-size: 12px;
+    line-height: 2.55;
+
+    background-image: repeating-linear-gradient(
+      to top,
+      getColor('gradient-grey') 0px 1px,
+      transparent 1px 31px
+    );
+
+    @include respondTo(tablet) {
+      font-size: 16px;
+      line-height: 1.86;
+      letter-spacing: 0.04em;
+    }
+  }
+  &__contact {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+
+    font-family: $fontPrimary;
+    font-weight: 500;
+    width: 172px;
+    height: 25px;
+    line-height: 1.86;
+    font-size: 14px;
+
+    text-align: center;
+    color: getColor('text-secondary');
+
+    margin-bottom: 30px;
+
+    @include respondTo(tablet) {
+      height: 25px;
+      font-size: 16px;
+
+      margin-bottom: 35px;
+    }
+    @include respondTo(desktop) {
+      height: 31px;
+      font-size: 20px;
+    }
+  }
+}
+
+.reviews-article__background {
+  position: relative;
+  margin-bottom: 52px;
+  background: #fafafa;
+  z-index: 1;
+
+  padding-top: 43px;
+  padding-bottom: 26px;
+  padding-right: 62px;
+  padding-left: 62px;
+
+  @include respondTo(tablet) {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 42px;
+    padding-top: 47px;
+    padding-bottom: 34px;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  @include respondTo(desktop) {
+    margin-left: 62px;
+    margin-right: 62px;
+    margin-bottom: 34px;
+    padding-bottom: 39px;
+    padding-right: 88px;
+    padding-left: 88px;
+  }
+
+  &::before {
+    z-index: -1;
+    content: '';
+    background: url('../images/reviews/mark.svg');
+    background-color: #fafafa;
+    position: absolute;
+    left: 61px;
+    top: 28px;
+    width: 54px;
+    height: 40px;
+
+    @include respondTo(tablet) {
+      left: 50px;
+      top: 32px;
+    }
+  }
+  &::after {
+    width: 100%;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    content: '...';
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 13px;
+    line-height: 30px;
+    display: block;
+    color: #c7133e;
+    background-color: getColor('background-primary');
+
+    @include respondTo(tablet) {
+      bottom: -24px;
+    }
+  }
+}
+.reviews__userpic {
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 29px;
+
+  @include respondTo(tablet) {
+    margin-bottom: 19px;
+  }
+
+  @include respondTo(desktop) {
+    margin-bottom: 15px;
+  }
+}
+
+.reviews-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// swiper script styles
+
+.swiper-pagination-bullet {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 12px;
+
+  @include cssTransition(transform);
+
+  &:first-child {
+    border-radius: 0;
+    background-color: getColor('background-primary');
+    background-image: url('../images/reviews/home.svg');
+  }
+
+  &-active {
+    background-color: getColor('accent');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &:hover,
+  &:focus {
+    transform: scale(90%);
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin-left: 0;
+  margin-right: 18px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  position: static;
+}

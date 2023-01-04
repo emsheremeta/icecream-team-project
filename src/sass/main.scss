@@ -1,0 +1,42 @@
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
+
+@import './utils/variables';
+
+@import './utils/functions';
+
+@import './utils/mixins';
+
+@import './base/dropstyles';
+
+@import './layout/body';
+
+@import './layout/section';
+
+@import './layout/container';
+
+@import './components/button';
+
+@import './partials/modal-window';
+
+@import './partials/header';
+
+@import './partials/hero-header';
+
+@import './partials/products';
+
+@import './partials/about';
+
+@import './partials/advantages';
+
+@import './partials/gallery';
+
+@import './partials/reviews';
+
+@import './partials/contacts';
+
+@import './partials/footer';
+
+@import './partials/home-button';

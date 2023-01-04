@@ -1,0 +1,229 @@
+.about {
+  background-color: getColor('background-secondary');
+  padding: 125px 0 39px 0;
+  position: relative;
+  z-index: 1;
+  background-image: url('../images/about/milk-left-mobile.png'),
+    url('../images/about/milk-right-mobile.png');
+  background-repeat: no-repeat;
+  background-size: 40px, 68px;
+  background-position: top 730px left, top 740px right;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/about/milk-left-mobile@2x.png'),
+      url('../images/about/milk-right-mobile@2x.png');
+  }
+}
+
+.label-text {
+  font-family: $fontSecondary;
+  font-size: 18px;
+  line-height: 1.1;
+  margin-bottom: 15px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: getColor('text-label');
+}
+
+.about-title {
+  margin-bottom: 26px;
+}
+
+.about-content {
+  display: block;
+
+  &__image {
+    margin-bottom: 46px;
+  }
+
+  &__text {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
+
+.about-image {
+  width: 100%;
+}
+
+.sup-text {
+  font-family: $fontPrimary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+
+  color: getColor('text-secondary');
+}
+
+.sub-text {
+  font-family: $fontPrimary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+
+  color: getColor('text-primary');
+
+  &--color {
+    color: getColor('accent');
+  }
+}
+
+@include respondTo(tablet) {
+  .about {
+    padding: 130px 0 66px 0;
+
+    background-image: none;
+
+    display: flex;
+    flex-direction: row;
+  }
+
+  .label-text {
+    font-size: 26px;
+  }
+
+  .about-title {
+    margin-bottom: 50px;
+  }
+
+  .about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__image {
+      margin-top: -130px;
+      margin-bottom: 0;
+      width: 340px;
+      height: auto;
+      margin-right: 17px;
+    }
+
+    &__text {
+      padding-top: 50px;
+      margin-right: 0;
+      margin-left: 0;
+      width: 340px;
+      height: auto;
+    }
+  }
+
+  .sup-text {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 42px;
+  }
+
+  .sub-text {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+}
+
+@include respondTo(desktop) {
+  .about {
+    padding: 125px 0 39px 0;
+
+    display: flex;
+    flex-direction: row;
+
+    background-image: url('../images/about/milk-left-desktop.png'),
+      url('../images/about/milk-right-desktop.png');
+    background-repeat: no-repeat;
+    background-size: 161px, 268px;
+    background-position: top 340px left, top 400px right;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/about/milk-left-desktop@2x.png'),
+        url('../images/about/milk-right-desktop@2x.png');
+    }
+  }
+
+  .label-text {
+    font-size: 30px;
+  }
+
+  .about-title {
+    margin-bottom: 55px;
+  }
+
+  .about-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    &__image {
+      width: 516px;
+      margin-right: 74px;
+      margin-top: 0;
+    }
+
+    &__text {
+      margin-right: 0;
+      margin-left: 0;
+      width: 500px;
+    }
+  }
+
+  .sup-text {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+  }
+
+  .sub-text {
+    line-height: 1.9;
+    margin-bottom: 15px;
+  }
+}
+
+// ==============================================
+
+.read-more-state {
+  display: none;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+}
+
+.read-less-label-span {
+  display: none;
+}
+
+.read-more-state:checked ~ .read-more-wrap {
+  & .read-more-target {
+    opacity: 1;
+    font-size: inherit;
+    max-height: 999em;
+  }
+
+  & .read-less-label-span {
+    display: inline;
+  }
+
+  & .read-more-label-span {
+    display: none;
+  }
+
+  & .button__icon {
+    transform: rotateY(180deg);
+  }
+}
+
+.button-about {
+  display: inline-flex;
+}
