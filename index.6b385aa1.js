@@ -1,0 +1,2 @@
+(()=>{const e=document.querySelector("[data-menu-button-open]"),n=document.querySelector("[data-menu-button-close]");e.addEventListener("click",(()=>{mobileMenuRef.classList.add("is-open"),document.body.classList.add("menu-open")})),n.addEventListener("click",(()=>{mobileMenuRef.classList.remove("is-open"),document.body.classList.remove("menu-open")}))})();
+//# sourceMappingURL=index.6b385aa1.js.map
